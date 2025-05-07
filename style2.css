@@ -1,0 +1,44 @@
+ @media (max-width: 1000px) {
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto-fit,1fr);
+    }
+ }
+
+
+  @media (max-width: 720px) {
+    .nav {
+      font-size: 22px;
+    }
+    
+    .bar {
+      padding: 10px;
+    }
+  
+    .btns {
+      font-size: 13px;
+      min-width: 50px;
+    }
+
+    .nav{
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav >div{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .nav div{
+        text-align: center;
+        height: 50px;
+        width: auto;
+    }
+    
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto-fit,1fr);
+    }
+  }
+  

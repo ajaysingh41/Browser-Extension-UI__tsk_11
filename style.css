@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.light{
+    
+    --background-color: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --card-background: #ffffff;
+    
+    --primary-text: #0b1d35;
+    --secondary-text: #4b5c74;
+    
+    --remove-button-bg: #f1f1f1;
+    --remove-button-text: #0b1d35;
+
+    --button-default-bg: #d6d8df;
+
+    --toggle-on-bg: #e53935;
+    --toggle-off-bg: #cfd8dc;
+    
+    --filter-active-bg: #c62828;
+    --filter-active-text: #ffffff;
+    
+    --filter-button-bg: #ffffff;
+    --filter-button-border: #e0e0e0;
+    --filter-button-text: #2b3139;
+    
+    --input-background: #ffffff;    
+    --input-border: #cfd8dc;
+    
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    
+}
+
+body.light{
+    background-color: var(--background-color);
+    color: var(--primary-text);
+}
+
+body.dark{
+    --background-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --card-background: #1f2937;
+  
+    --primary-text: #ffffff;
+    --secondary-text: #cbd5e1;
+  
+    --button-default-bg: #323b4d;       
+    
+    --button-default-text: #f1f5f9;
+    --button-default-border: #3f4957;
+  
+    --button-hover-bg: #dc2626;
+    --button-hover-text: #ffffff;
+
+    --filter-button-bg: #475569;
+    --filter-button-border: #54689a;
+    --filter-button-text: white;
+  
+    --remove-button-bg: #374151;
+    --remove-button-text: #f8fafc;
+  
+    --toggle-off-bg: #475569;
+    --toggle-on-bg: #dc2626;
+  
+    --input-background: #1e293b;
+    --input-border: #334155;
+  
+    --shadow-light: rgba(0, 0, 0, 0.4); 
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: var(--background-color);
+    padding: 2.5rem 5%;
+}
+.extension-container{
+    height: 100%;
+}
+.bar{
+    background-color: var(--card-background);
+    border-radius: 20px;
+    padding:10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme{ 
+    height: 35px;
+    width: auto;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.theme:hover{
+    background-color: var(--button-default-bg);
+    transition: all 0.5s ease;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    font-size: 30px;
+    font-weight: 600;
+}
+.btns{
+    height: 30px;
+    min-width: 60px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    border: 1px solid var(--filter-button-border);
+    font-synthesis: 200;
+    font-size: 15px;
+    background-color: var(--card-background);
+    color: var(--filter-button-text);
+    cursor: pointer;
+}
+.btns:hover{
+    background-color: var(--filter-active-bg);
+    color: var(--filter-active-text);
+    transition: all 0.3s ease;
+}
+.remove{
+    background-color: var(--remove-button-bg);
+    color: var(--remove-button-text);
+}
+.cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.card{
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--card-background);
+    border: 2px solid grey;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 20px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about h4{
+    font-size: 18px;
+}
+.about p{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.remove-toggle{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.toggle{
+    margin-top: 5px;
+    height: 18px;
+    width: 35px;
+    background-color: var(--toggle-off-bg);
+    border: 1px solid var(--filter-button-border);
+    border-radius: 9px;
+    cursor: pointer;
+}
+.toggle div{
+    height: 100%;
+    width: 16px;
+    background-color: white;
+    border-radius: 9px;
+}
+
+.toggle.toggleon{
+    display: flex;
+    flex-direction: row-reverse;
+    transition: flex-direction 0.5s ease;
+    background-color: var(--toggle-on-bg);
+    border: 2px solid var(--toggle-on-bg);
+}
+
+.filter-selected{
+    background-color: var(--filter-active-bg);
+    color: var(--filter-active-text);
+}
