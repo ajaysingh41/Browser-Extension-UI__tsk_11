@@ -7,10 +7,12 @@ function switchMode() {
         btn.src="images/icon-sun.svg";
         btn.alt="light";
         btn.classList.add("dark");
+        logo.src="images/logo-dark.svg";
     } else{
         btn.src="images/icon-moon.svg";
         btn.alt="dark";
         btn.classList.add("light");
+        logo.src="images/logo.svg";
     }
     
 }
