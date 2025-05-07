@@ -1,5 +1,6 @@
 let btn=document.querySelector(".theme");
 let container=document.querySelector("body");
+let logo=document.querySelector(".logo");
 
 function switchMode() {
     container.classList.toggle("dark");
