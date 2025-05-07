@@ -6,14 +6,14 @@ function switchMode() {
     container.classList.toggle("dark");
     if(container.classList.contains("dark")){
         btn.src="images/icon-sun.svg";
+        logo.src="images/logo-dark.svg";
         btn.alt="light";
         btn.classList.add("dark");
-        logo.src="images/logo-dark.svg";
     } else{
         btn.src="images/icon-moon.svg";
+        logo.src="images/logo.svg";
         btn.alt="dark";
         btn.classList.add("light");
-        logo.src="images/logo.svg";
     }
     
 }
